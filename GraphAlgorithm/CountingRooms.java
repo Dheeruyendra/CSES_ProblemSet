@@ -1,17 +1,15 @@
-
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+ 
 public class CountingRooms {
-
+ 
     public static void main(String[] args)throws IOException {
       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
       String[] str = br.readLine().split("\\s+");
       int n = Integer.parseInt(str[0]);
       int m = Integer.parseInt(str[1]);
-
+ 
       char[][] grid = new char[n][m];
       for(int i=0; i<n; i++){
         String st = br.readLine();
@@ -19,10 +17,10 @@ public class CountingRooms {
             grid[i][j] = st.charAt(j);
         }
       }
-
+ 
        solve(grid);
     }
-
+ 
     private static void solve(char[][] grid) {
             int n = grid.length;
             int m = grid[0].length;
